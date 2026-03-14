@@ -24,5 +24,5 @@ Export feature from MC Bedrock is only supported in some devices. Some use cases
 
 `tkinter` lib from Python (beta.py)
 
-`Termux` app from [Termux App](https://github.com/termux/termux-app)
+`Termux` app from [Termux App](https://github.com/termux/termux-app) (Android)
 
