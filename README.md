@@ -10,8 +10,11 @@ Extract's mcstructures from the Bedrock leveldb (possibly saved from the `/struc
 
 All extracted files will be outputted to specified location using `-o`
 
-Periods in the namespace will automatically create subdirectories in the `structures` folder. 
-Ex: `destruc7i0n.test:structure` will output to `<world>/structures/destruc7i0n/test/structure.mcstructure`
+## GUI Mode (Unstable)
+
+`python3 beta.py` to open GUI
+
 
 ### Note
 `leveldb` lib is from `Amulet-Team/Amulet-Core`.
+`tkinter` lib from Python (beta.py)
