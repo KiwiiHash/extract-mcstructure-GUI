@@ -14,6 +14,9 @@ All extracted files will be outputted to specified location using `-o`
 
 `python3 beta.py` to open GUI
 
+*Meant to be used for Linux* 
+
+
 
 ### Note
 `leveldb` lib is from `Amulet-Team/Amulet-Core`.
