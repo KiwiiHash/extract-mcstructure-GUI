@@ -1,28 +1,74 @@
 # extract-mcstructure
 
-Extract's mcstructures from the Bedrock leveldb (possibly saved from the `/structure` command) to `.mcstructure` files which can be moved across worlds.
+A tool for extracting `.mcstructure` files from a Minecraft Bedrock world’s LevelDB database.  
+These structures may include ones saved using the `/structure` command. The extracted `.mcstructure` files can then be imported into other worlds.
+
+---
 
 ## Usage
 
-`python3 run.py World all` - Extracts all mcstructures from the world named "World" (as seen on the in-game menu)
+### Example extract all structures
 
-`python3 run.py World house -o example/ouput` - Extracts the structure named "house" from the world named "World" into a folder named "output" in specified directory
+```bash
+python3 run.py World all
+````
 
-All extracted files will be outputted to specified location using `-o`
+Extracts **all `.mcstructure` files** from the world named `World` (the name shown in the in-game world list).
+
+---
+
+### Extract a specific structure & Specify output directory
+
+```bash
+python3 run.py World house -o example/output
+```
+
+Extracts the structure named `house` from the world `World` and saves it to the directory named output:
+
+```
+example/output
+```
+
+---
+
+### Output directory
+
+Use the `-o` flag to specify where extracted files should be saved.
+
+If not specified, the program will use its default output location.
+
+---
 
 ## GUI Mode (Unstable)
 
-`python3 beta.py` to open GUI
+You can launch the graphical interface with:
 
-*Meant to be used for Linux* 
+```bash
+python3 beta.py
+```
+
+> The GUI mode is experimental and mainly intended for **Linux users**. *(Using Wine)*
+
+---
 
 ## Why use this?
-Export feature from MC Bedrock is only supported in some devices. Some use cases for this is getting `.mcstrucutre` from a specific world but export button is not available in your device. 
 
-### Note
-`leveldb` lib is from `Amulet-Team/Amulet-Core`.
+Some versions of **Minecraft Bedrock Edition** do not include the built-in **Export** button for structures.
 
-`tkinter` lib from Python (beta.py)
+This tool allows you to manually extract `.mcstructure` files from a world, making it possible to:
 
-`Termux` app from [Termux App](https://github.com/termux/termux-app) (Android)
+* Recover structures from worlds
+* Transfer structures between worlds
+* Export structures on devices where the export feature is unavailable
 
+---
+
+## Dependencies / Credits
+
+* `leveldb` library from
+  [https://github.com/Amulet-Team/Amulet-Core](https://github.com/Amulet-Team/Amulet-Core)
+
+* `tkinter` (used by `beta.py`) — included with Python
+
+* `Termux` Android app
+  [https://github.com/termux/termux-app](https://github.com/termux/termux-app)
